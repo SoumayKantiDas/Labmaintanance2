@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Labmaintanance2.Models.Action>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.action_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action_date)
+        </th>
+        <th>
+            Techinician name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Complain.Name_Of_the_Item)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeachName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Complain.Name_Of_the_Item)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.action_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.action_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.action_id })
+        </td>
+    </tr>
+}
+
+</table>

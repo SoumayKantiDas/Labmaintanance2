@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a53fa2389fe4ea88d21add171267beb" Name="Diagram1">
+        <EntityTypeShape EntityType="LabMaintanance2Model.Action" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMaintanance2Model.Complain" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMaintanance2Model.Priority" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMaintanance2Model.Repaired_Staus" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMaintanance2Model.Role" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabMaintanance2Model.User" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="LabMaintanance2Model.FK__Actions__complai__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMaintanance2Model.FK__Complains__Prior__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMaintanance2Model.FK__Complains__Repai__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMaintanance2Model.FK__Complains__user___2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="LabMaintanance2Model.FK__Users__role_id__2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

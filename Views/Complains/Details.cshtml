@@ -1,0 +1,87 @@
+﻿@model Labmaintanance2.Models.Complain
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Complain</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Of_the_Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Of_the_Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image_data)
+        </dt>
+        <dd>
+            @if (Model.image_data != null)
+            {
+                var base64Image = Convert.ToBase64String(Model.image_data);
+                var imgSrc = $"data:image;base64,{base64Image}";
+                <img src="@imgSrc" alt="Complain Image" style="width: 200px; height: 150px;" />
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority.priority1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority.priority1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Repaired_Staus.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Repaired_Staus.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.complain_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
